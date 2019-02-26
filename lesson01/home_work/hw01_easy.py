@@ -13,12 +13,12 @@ import random
 # * при желании решите задачу с применением цикла for.
 #
 
-randint = random.randint(-99999999,99999999)
-print("Число: ", randint)
-randint = abs(randint)
-while randint > 0:
-    print(randint % 10)
-    randint = randint // 10
+randInt = random.randint(-99999999, 99999999)
+print("Число: ", randInt)
+randInt = abs(randInt)
+while randInt > 0:
+    print(randInt % 10)
+    randInt = randInt // 10
 
 # Задача-2: Исходные значения двух переменных запросить у пользователя.
 # Поменять значения переменных местами. Вывести новые значения на экран.
