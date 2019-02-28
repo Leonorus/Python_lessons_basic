@@ -55,8 +55,8 @@ if D == 0:
     x1 = (-1 * b + math.sqrt(D) / 2 * a)
     print("x1 = ", x1)
 elif D > 0:
-    x1 = (-1 * b + math.sqrt(D)/ 2 * a)
-    x2 = (-1 * b - math.sqrt(D)/ 2 * a)
+    x1 = (-1 * b + math.sqrt(D) / (2 * a))
+    x2 = (-1 * b - math.sqrt(D) / (2 * a))
     print("x1 = ", x1, "x2 = ", x2)
 else:
     print("Корней нет")
