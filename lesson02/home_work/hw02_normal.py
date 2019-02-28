@@ -84,6 +84,6 @@ print(f"{number_to_word(splited_date[0], 'day')} {number_to_word(splited_date[1]
 # для получения случайного числа используйте функцию randint() модуля random
 #
 
-def generate_list(length=0):
-    gen_list = [random.randint(-100, 100) for i in range(0, random.randint(10, 99) if length == 0 else length)]
+def generate_list(length=False):
+    gen_list = [random.randint(-100, 100) for i in range(0,  length if length else random.randint(10, 99))]
     return gen_list
