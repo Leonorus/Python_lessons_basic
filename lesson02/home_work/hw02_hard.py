@@ -52,3 +52,18 @@ print(f"Words in both texts: {words1.intersection(words2)}")
 # Нужно сравнить два словаря и дать словарь, в котором будет список покупок
 # Если для рецепта всё есть, то сказать что ничего не нужно
 # Разницей по измерению гр, мл, шт. Пренебречь
+
+recipe = {"lemon": 1, "egg": 3, "flour": 100}
+fridge = {"steak": 1, "egg": 2, "flour": 1000}
+shop_list = dict()
+print(f"Recipe: {recipe}")
+print(f"In fridge: {fridge}")
+
+for product in recipe:
+    if product in fridge:
+        if recipe[product] > fridge[product]:
+            shop_list[product] = recipe[product] - fridge[product]
+    else:
+        shop_list[product] = recipe[product]
+print(f"Need to buy: {shop_list}")
+
