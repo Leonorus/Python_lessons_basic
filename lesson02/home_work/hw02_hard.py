@@ -30,17 +30,11 @@ print(f"Latin letters in text: {letter_count}")
 
 # Задача-2 Пользователь вводит два текста, необходимо найти все слова, которые есть в обоих текстах. Без учета регистра
 
-
-def lower_word(word):
-    word = word.lower()
-    return word
-
-
 text1 = input("Input first text: ")
 text2 = input("Input second text: ")
 
-words1 = set(map(lower_word, split_text_by_words(text1)))
-words2 = set(map(lower_word, split_text_by_words(text2)))
+words1 = set(map(lambda x: x.lower(), split_text_by_words(text1)))
+words2 = set(map(lambda x: x.lower(), split_text_by_words(text2)))
 
 print(f"Words in both texts: {words1.intersection(words2)}")
 
