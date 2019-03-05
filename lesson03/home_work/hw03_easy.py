@@ -10,14 +10,21 @@
 def custom_round(number, signs):
     number_parts = str(number).split(".")
     inc = 0
+    if len(number_parts) < 2:
+        return number
+    elif len(number_parts[1]) <= signs:
+        return number
     if int(number_parts[1][signs]) >= 5:
-        inc = 1
-    number_parts[1] = str(int(str(number_parts[1][:signs])) + inc)
-    rounded_number = float(".".join(number_parts))
+        inc = float("0." + "0" * signs + "1")
+    unrounded_number = number + inc
+    rounded_number = float(str(unrounded_number)[:signs+3])
     return rounded_number
 
 
-print(custom_round(0.1239567, 4))
+print(custom_round(0.9939567, 1))   # 1
+print(custom_round(0.9939567, 3))   # 0.994
+print(custom_round(10, 4))          # 10
+print(custom_round(0.9939567, 8))   # 0.9939567
 
 # Задание-2:
 # Дан шестизначный номер билета. Определить, является ли билет счастливым.
